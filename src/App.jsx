@@ -3,10 +3,69 @@ import './App.css'
 import { useState } from "react";
 import SpareRibs from "./pages/SpareRibs";
 import Footer from "./components/Footer";
+import CollectionPage from "./components/CollectionPage";
 
 function App() {
   const [showSpareRibs, setShowSpareRibs] = useState(false);
+  const [activeCollection, setActiveCollection] = useState(null);
 
+
+const collections = {
+  smokehouse: {
+    title: "The Smokehouse",
+    description:
+      "Real backyard BBQ, smoked low and slow. Browse the cooks, recipes, and lessons learned around the pit.",
+    items: [
+      {
+        id: "spare-ribs",
+        title: "Backyard Smoked Spare Ribs",
+        description:
+          "Two racks of spare ribs smoked on the Traeger Pro 34, wrapped with Butter Bath, and finished with BBQ sauce.",
+        image: "/images/food/spare-ribs-after.jpeg",
+      },
+    ],
+  },
+
+  kitchen: {
+    title: "The Kitchen",
+    description:
+      "Easy, affordable, and delicious meals for the whole family. Welcome to the Pit & Pour digital cookbook.",
+    items: [],
+  },
+
+  "weekend-pour": {
+    title: "The Weekend Pour",
+    description:
+      "A casual look at bourbon, from the first aroma to the final sip. Real bottles, real tasting notes, and personal reviews.",
+    items: [],
+  },
+};
+
+if (activeCollection && collections[activeCollection]) {
+  const collection = collections[activeCollection];
+
+  return (
+    <div>
+      <CollectionPage
+        title={collection.title}
+        description={collection.description}
+        items={collection.items}
+        onBack={() => {
+          setActiveCollection(null);
+          window.scrollTo(0, 0);
+        }}
+        onSelect={(id) => {
+          if (id === "spare-ribs") {
+            setShowSpareRibs(true);
+            setActiveCollection(null);
+            window.scrollTo(0, 0);
+          }
+        }}
+      />
+      <Footer />
+    </div>
+  );
+}
 
 if (showSpareRibs) {
   return (
@@ -108,34 +167,59 @@ if (showSpareRibs) {
   type="button"
   className="recipe-button"
   onClick={() => {
-    setShowSpareRibs(true);
-    window.scrollTo(0, 0);
-  }}
+  setActiveCollection("smokehouse");
+  window.scrollTo(0, 0);
+}}
 >
-  View Spare Ribs Recipe →
+  View Recipes →
 </button>
 </article>
 
 
             <article id="kitchen" className="feature-card">
-              <div className="feature-icon">🍳</div>
-              <h3>The Kitchen</h3>
-              <p>
-                Easy, affordable, and delicious meals for the
-                whole family. Explore the Pit & Pour cookbook.
-              </p>
-              <span>Recipes & Cooking</span>
-            </article>
+  <div className="feature-icon">🍳</div>
+  <h3>The Kitchen</h3>
+  <p>
+    Easy, affordable, and delicious meals for the
+    whole family. Explore the Pit & Pour cookbook.
+  </p>
+  <span>Recipes & Cooking</span>
 
-            <article id="weekend-pour" className="feature-card">
-              <div className="feature-icon">🥃</div>
-              <h3>The Weekend Pour</h3>
-              <p>
-                A casual look at bourbon, from the first aroma
-                to the final sip.
-              </p>
-              <span>Bourbon Reviews</span>
-            </article>
+  <button
+    type="button"
+    className="recipe-button"
+    onClick={() => {
+      setActiveCollection("kitchen");
+      window.scrollTo(0, 0);
+    }}
+  >
+    View Recipes →
+  </button>
+</article>
+<article id="weekend-pour" className="feature-card">
+  <div className="feature-icon">🥃</div>
+
+  <h3>The Weekend Pour</h3>
+
+  <p>
+    A casual look at bourbon, from the first aroma
+    to the final sip. Real bottles, real tasting notes,
+    and honest reviews.
+  </p>
+
+  <span>Bourbon Reviews</span>
+
+  <button
+    type="button"
+    className="recipe-button"
+    onClick={() => {
+      setActiveCollection("weekend-pour");
+      window.scrollTo(0, 0);
+    }}
+  >
+    View Reviews →
+  </button>
+</article>
           </div>
         </div>
       </section>
