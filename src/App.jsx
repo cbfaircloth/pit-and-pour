@@ -6,6 +6,7 @@ import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
 import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
+import About from "./pages/About";
 
 function App() {
   const [showSpareRibs, setShowSpareRibs] = useState(false);
@@ -15,6 +16,7 @@ function App() {
   setShowCheesySausagePotatoes
 ] = useState(false);
 const [showBirdDogSelectReserve, setShowBirdDogSelectReserve] = useState(false);
+const [showAbout, setShowAbout] = useState(false);
 
 
 const collections = {
@@ -67,6 +69,30 @@ items: [
 
   },
 };
+
+
+if (showAbout) {
+  return (
+    <>
+      <div className="about-back-container">
+        <button
+          type="button"
+          className="recipe-button recipe-back-button"
+          onClick={() => {
+            setShowAbout(false);
+            window.scrollTo(0, 0);
+          }}
+        >
+          ← Back to Pit &amp; Pour
+        </button>
+      </div>
+
+      <About />
+      <Footer />
+    </>
+  );
+}
+
 
 if (activeCollection && collections[activeCollection]) {
   const collection = collections[activeCollection];
@@ -195,7 +221,16 @@ if (showSpareRibs) {
             <a href="#smokehouse">The Smokehouse</a>
             <a href="#kitchen">The Kitchen</a>
             <a href="#weekend-pour">The Weekend Pour</a>
-            <a href="#about">About</a>
+            <button
+  type="button"
+  className="nav-link-button"
+  onClick={() => {
+    setShowAbout(true);
+    window.scrollTo(0, 0);
+  }}
+>
+  About
+</button>
           </nav>
         </div>
       </header>

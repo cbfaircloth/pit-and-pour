@@ -880,3 +880,200 @@
   background: #d47b35;
   color: #17191b;
 }
+
+/* =========================================
+   PIT & POUR - ABOUT PAGE
+   ========================================= */
+
+.about-page {
+  min-height: 100vh;
+  background: #17191b;
+  color: #f3ebdd;
+  padding: 65px 24px 90px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-header {
+  margin-bottom: 50px;
+}
+
+.about-eyebrow {
+  display: block;
+  color: #d47b35;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about-header h1 {
+  font-size: clamp(36px, 5vw, 54px);
+  margin: 0 0 15px;
+  color: #f3ebdd;
+}
+
+.about-tagline {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #cfc5b8;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr);
+  gap: 45px;
+  align-items: start;
+  margin-bottom: 75px;
+}
+
+.about-photo-placeholder {
+  min-height: 420px;
+  border: 1px dashed #d47b35;
+  border-radius: 14px;
+  background: #222426;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.about-photo-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.about-photo-placeholder p {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.about-photo-placeholder small {
+  color: #cfc5b8;
+  line-height: 1.6;
+}
+
+.about-intro-text h2,
+.about-section h2,
+.about-honesty h2 {
+  color: #f3ebdd;
+  font-size: 30px;
+  margin: 0 0 22px;
+}
+
+.about-intro-text p,
+.about-feature p,
+.about-honesty p {
+  color: #cfc5b8;
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+}
+
+.about-section {
+  margin-bottom: 75px;
+}
+
+.about-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-feature {
+  background: #222426;
+  border: 1px solid #383838;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.about-feature-label {
+  display: block;
+  color: #d47b35;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.about-feature h3 {
+  color: #f3ebdd;
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+
+.about-honesty {
+  background: #222426;
+  border-left: 4px solid #d47b35;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.about-signoff {
+  color: #d47b35 !important;
+  font-size: 20px !important;
+  font-weight: 700;
+  margin-top: 25px !important;
+  margin-bottom: 0 !important;
+}
+
+/* About page - Mobile */
+
+@media (max-width: 800px) {
+  .about-page {
+    padding: 40px 18px 65px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-photo-placeholder {
+    min-height: 300px;
+  }
+
+  .about-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-honesty {
+    padding: 25px;
+  }
+}
+
+/* =========================================
+   ABOUT NAVIGATION BUTTON
+   ========================================= */
+
+.main-nav .nav-link-button {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.main-nav .nav-link-button:hover {
+  color: #d47b35;
+}
+
+.main-nav .nav-link-button:focus-visible {
+  outline: 2px solid #d47b35;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
