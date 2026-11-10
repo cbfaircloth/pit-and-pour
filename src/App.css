@@ -1,0 +1,669 @@
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.welcome {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background:
+    radial-gradient(circle at 50% 30%, #30241d 0%, #17191b 60%);
+}
+
+.welcome-content {
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+}
+
+.flame {
+  font-size: 64px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  color: #c79a58;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.welcome h1 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(52px, 9vw, 112px);
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 1.1;
+  color: #f3ebdd;
+  margin: 0 0 24px;
+}
+
+.welcome h1 span {
+  color: #d47735;
+}
+
+.tagline {
+  color: #d47735;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.description {
+  color: #c9c2b8;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+.welcome-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.welcome-links a {
+  display: inline-block;
+  padding: 14px 22px;
+  border: 1px solid #d47735;
+  border-radius: 6px;
+  color: #f3ebdd;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.welcome-links a:hover {
+  background: #d47735;
+  color: #17191b;
+  transform: translateY(-2px);
+}
+
+.coming-soon {
+  color: #a69a8d;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .welcome h1 {
+    letter-spacing: -2px;
+  }
+
+  .welcome-links {
+    flex-direction: column;
+  }
+
+  .welcome-links a {
+    width: 100%;
+  }
+}
+
+/* Official Pit & Pour primary logo */
+.brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto 32px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+/* Pit & Pour Navigation */
+
+.site-header {
+  width: 100%;
+  background: #111315;
+  border-bottom: 1px solid #343638;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.site-name {
+  color: #f3ebdd;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-name span {
+  color: #d47735;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #c9c2b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: #d47735;
+}
+
+/* Adjust welcome page for header */
+
+.welcome {
+  min-height: calc(100vh - 85px);
+  scroll-margin-top: 85px;
+}
+
+/* Mobile Navigation */
+
+@media (max-width: 800px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .main-nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+}
+
+/* Homepage feature sections */
+
+.homepage-sections {
+  background: #111315;
+  padding: 100px 24px;
+}
+
+.sections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-eyebrow {
+  color: #d47735;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.sections-container h2 {
+  color: #f3ebdd;
+  font-size: clamp(30px, 4vw, 46px);
+  margin-bottom: 20px;
+}
+
+.sections-intro {
+  max-width: 650px;
+  margin: 0 auto 55px;
+  color: #bdb5aa;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: #1d2022;
+  border: 1px solid #37312c;
+  border-radius: 12px;
+  padding: 40px 28px;
+  text-align: left;
+  scroll-margin-top: 100px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #d47735;
+}
+
+.feature-icon {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+.feature-card h3 {
+  color: #f3ebdd;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.feature-card p {
+  color: #bdb5aa;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.feature-card span {
+  color: #d47735;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 850px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage-sections {
+    padding: 65px 20px;
+  }
+}
+
+/* Authentic Pit & Pour food photography */
+
+.feature-photo {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .feature-photo {
+    height: 200px;
+  }
+}
+
+/* Pit & Pour Recipe Buttons */
+
+.recipe-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px 18px;
+  background-color: #d47735;
+  color: #17191b;
+  border: 1px solid #d47735;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.recipe-button:hover {
+  background-color: #e58b49;
+  transform: translateY(-2px);
+}
+
+.recipe-button:focus-visible {
+  outline: 3px solid #f3ebdd;
+  outline-offset: 3px;
+}
+
+/* Pit & Pour Recipe Page Layout */
+
+.recipe-page {
+  min-height: 100vh;
+  background-color: #17191b;
+  color: #f3ebdd;
+  padding: 40px 24px 80px;
+}
+
+.recipe-page-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Recipe Page Back Button */
+
+.recipe-back-button {
+  display: inline-block;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 12px 22px;
+}
+
+/* Pit & Pour Recipe Article */
+
+.smokehouse-article {
+  width: 100%;
+  color: #f3ebdd;
+}
+
+.article-category {
+  color: #d47735;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.smokehouse-article h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.article-intro {
+  max-width: 850px;
+  color: #cfc5b8;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.article-photo {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.recipe-details {
+  max-width: 850px;
+}
+
+.recipe-details h2,
+.smokehouse-article > h2 {
+  color: #f3ebdd;
+  font-size: 26px;
+  margin: 36px 0 20px;
+}
+
+.recipe-details ul {
+  background-color: #222426;
+  border: 1px solid #383838;
+  border-left: 4px solid #d47735;
+  border-radius: 10px;
+  padding: 25px 30px 25px 48px;
+  margin-bottom: 40px;
+}
+
+.recipe-details ul li {
+  padding: 7px 0;
+  line-height: 1.6;
+}
+
+.recipe-details ol {
+  list-style: none;
+  counter-reset: recipe-step;
+  padding: 0;
+  margin: 25px 0 45px;
+}
+
+.recipe-details ol li {
+  counter-increment: recipe-step;
+  position: relative;
+  background-color: #222426;
+  border: 1px solid #383838;
+  border-radius: 10px;
+  padding: 24px 24px 24px 75px;
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+
+.recipe-details ol li::before {
+  content: counter(recipe-step);
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #d47735;
+  color: #17191b;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.recipe-details strong {
+  color: #f3ebdd;
+}
+
+.recipe-details p,
+.smokehouse-article > p {
+  max-width: 850px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .recipe-details ol li {
+    padding: 65px 18px 20px;
+  }
+
+  .recipe-details ol li::before {
+    left: 18px;
+    top: 18px;
+  }
+
+  .recipe-details ul {
+    padding: 20px 18px 20px 36px;
+  }
+}
+
+/* Pit & Pour Recipe Photo Gallery */
+
+.recipe-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 35px 0 45px;
+}
+
+.recipe-gallery-item {
+  overflow: hidden;
+  background-color: #222426;
+  border: 1px solid #383838;
+  border-radius: 12px;
+}
+
+.recipe-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.recipe-gallery-caption {
+  padding: 20px;
+}
+
+.recipe-gallery-caption span {
+  display: block;
+  color: #d47735;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.recipe-gallery-caption h3 {
+  color: #f3ebdd;
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.recipe-gallery-caption p {
+  color: #cfc5b8;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .recipe-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-gallery-item img {
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    background-color: #17191b;
+  }
+}
+
+/* Pit & Pour Recipe Information Panel */
+
+.recipe-info {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 30px 0 12px;
+}
+
+.recipe-info-item {
+  background-color: #222426;
+  border: 1px solid #383838;
+  border-radius: 10px;
+  padding: 20px 16px;
+}
+
+.recipe-info-item span {
+  display: block;
+  color: #d47735;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.recipe-info-item strong {
+  color: #f3ebdd;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.recipe-time-note {
+  color: #b9afa3;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 750px) {
+  .recipe-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .recipe-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pit & Pour Website Footer */
+
+.site-footer {
+  width: 100%;
+  margin-top: 80px;
+  padding: 45px 24px 25px;
+  background-color: #111315;
+  border-top: 1px solid #383838;
+  color: #f3ebdd;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.footer-brand h3 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+.footer-brand h3 span {
+  color: #d47735;
+}
+
+.footer-brand p {
+  color: #b9afa3;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #333638;
+  padding-top: 22px;
+}
+
+.footer-bottom p {
+  color: #b9afa3;
+  font-size: 13px;
+  margin: 0;
+}
+
+.footer-tagline {
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
