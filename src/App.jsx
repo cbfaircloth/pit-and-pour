@@ -2,12 +2,19 @@
 import './App.css'
 import { useState } from "react";
 import SpareRibs from "./pages/SpareRibs";
+import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
+import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
 
 function App() {
   const [showSpareRibs, setShowSpareRibs] = useState(false);
   const [activeCollection, setActiveCollection] = useState(null);
+    const [
+  showCheesySausagePotatoes,
+  setShowCheesySausagePotatoes
+] = useState(false);
+const [showBirdDogSelectReserve, setShowBirdDogSelectReserve] = useState(false);
 
 
 const collections = {
@@ -26,18 +33,38 @@ const collections = {
     ],
   },
 
-  kitchen: {
-    title: "The Kitchen",
-    description:
-      "Easy, affordable, and delicious meals for the whole family. Welcome to the Pit & Pour digital cookbook.",
-    items: [],
-  },
+ 
+kitchen: {
+  title: "The Kitchen",
+  description:
+    "Easy, affordable, and delicious meals for the whole family. Welcome to the Pit & Pour digital cookbook.",
+  items: [
+    {
+      id: "cheesy-sausage-potatoes",
+      title: "Cheesy Sausage & Potatoes Skillet",
+      description:
+        "Golden potatoes, browned smoked sausage, and plenty of melted cheddar cheese. An easy, hearty skillet dinner!",
+      image: "/images/food/cheesy-potatoes-sausage.jpeg",
+    },
+  ],
+},
+
 
   "weekend-pour": {
     title: "The Weekend Pour",
     description:
       "A casual look at bourbon, from the first aroma to the final sip. Real bottles, real tasting notes, and personal reviews.",
-    items: [],
+    
+items: [
+  {
+    id: "bird-dog-select-reserve",
+    title: "Bird Dog Select Reserve",
+    description:
+      "A surprisingly smooth, budget-friendly Kentucky straight bourbon with maple on the nose, a sweet swallow, and very little burn. Would I buy it again? Absolutely!",
+    image: "/images/bourbon/birddog-bourbon.jpeg",
+  },
+],
+
   },
 };
 
@@ -54,14 +81,80 @@ if (activeCollection && collections[activeCollection]) {
           setActiveCollection(null);
           window.scrollTo(0, 0);
         }}
-        onSelect={(id) => {
-          if (id === "spare-ribs") {
-            setShowSpareRibs(true);
-            setActiveCollection(null);
-            window.scrollTo(0, 0);
-          }
-        }}
+       
+onSelect={(id) => {
+  if (id === "spare-ribs") {
+    setShowSpareRibs(true);
+    setActiveCollection(null);
+    window.scrollTo(0, 0);
+  }
+
+  if (id === "cheesy-sausage-potatoes") {
+    setShowCheesySausagePotatoes(true);
+    setActiveCollection(null);
+    window.scrollTo(0, 0);
+  }
+
+if (id === "bird-dog-select-reserve") {
+  setShowBirdDogSelectReserve(true);
+  setActiveCollection(null);
+  window.scrollTo(0, 0);
+}
+
+}}
+
       />
+      <Footer />
+    </div>
+  );
+}
+
+
+if (showBirdDogSelectReserve) {
+  return (
+    <div>
+      <div
+        className="recipe-page-container"
+        style={{ paddingTop: "30px", paddingBottom: "0" }}
+      >
+        <button
+          type="button"
+          className="recipe-button recipe-back-button"
+          onClick={() => {
+            setShowBirdDogSelectReserve(false);
+            setActiveCollection("weekend-pour");
+            window.scrollTo(0, 0);
+          }}
+        >
+          ← Back to The Weekend Pour
+        </button>
+      </div>
+
+      <BirdDogSelectReserve />
+      <Footer />
+    </div>
+  );
+}
+
+
+if (showCheesySausagePotatoes) {
+  return (
+    <div className="recipe-page">
+      <div className="recipe-page-container">
+        <button
+          type="button"
+          className="recipe-button recipe-back-button"
+          onClick={() => {
+            setShowCheesySausagePotatoes(false);
+            setActiveCollection("kitchen");
+            window.scrollTo(0, 0);
+          }}
+        >
+          ← Back to The Kitchen
+        </button>
+
+        <CheesySausagePotatoes />
+      </div>
       <Footer />
     </div>
   );
@@ -177,7 +270,13 @@ if (showSpareRibs) {
 
 
             <article id="kitchen" className="feature-card">
-  <div className="feature-icon">🍳</div>
+  
+<img
+  src="/images/food/cheesy-potatoes-sausage.jpeg"
+  alt="Homemade cheesy sausage and potatoes skillet"
+  className="feature-photo"
+/>
+
   <h3>The Kitchen</h3>
   <p>
     Easy, affordable, and delicious meals for the
@@ -197,7 +296,11 @@ if (showSpareRibs) {
   </button>
 </article>
 <article id="weekend-pour" className="feature-card">
-  <div className="feature-icon">🥃</div>
+  <div className="feature-icon"><img
+  src="/images/bourbon/birddog-bourbon.jpeg"
+  alt="Bird Dog Select Reserve bourbon"
+  className="feature-photo"
+/></div>
 
   <h3>The Weekend Pour</h3>
 

@@ -49,9 +49,11 @@ export default function CollectionPage({
                 <div className="collection-card-content">
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
-                  <span>
-                    {item.actionLabel || "View Recipe"} →
-                  </span>
+                 <span>
+  {title === "The Weekend Pour"
+    ? "Read My Review →"
+    : "View Recipe →"}
+</span>
                 </div>
               </button>
             ))
