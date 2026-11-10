@@ -1077,3 +1077,31 @@
   outline-offset: 5px;
   border-radius: 2px;
 }
+
+/* =========================================
+   ABOUT PAGE - PITMASTER PHOTO
+   ========================================= */
+
+.about-photo {
+  width: 100%;
+  border: 2px solid #d47b35;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #222426;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.about-profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile adjustments */
+@media (max-width: 800px) {
+  .about-photo {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}

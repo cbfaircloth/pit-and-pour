@@ -16,11 +16,16 @@ export default function About() {
         </header>
 
         <section className="about-intro">
-          <div className="about-photo-placeholder">
-            <span className="about-photo-icon">🔥</span>
-            <p>Future Pitmaster Photo</p>
-            <small>Coming soon... once I'm dressed for the occasion!</small>
-          </div>
+          
+           
+<div className="about-photo">
+  <img
+    src="/images/about/thelegend.png"
+    alt="Brandon wearing his BBQ apron in the backyard"
+    className="about-profile-image"
+  />
+</div>
+
 
           <div className="about-intro-text">
             <h2>Hey, I'm Brandon!</h2>
