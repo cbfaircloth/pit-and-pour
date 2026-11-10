@@ -1105,3 +1105,24 @@
     margin: 0 auto;
   }
 }
+
+/* =========================================
+   HOMEPAGE CARD BUTTON ALIGNMENT
+   ========================================= */
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card .recipe-button {
+  margin-top: auto;
+}
+
+/* =========================================
+   HOMEPAGE CARD CATEGORY SPACING
+   ========================================= */
+
+.feature-card > span {
+  margin-bottom: 15px;
+}

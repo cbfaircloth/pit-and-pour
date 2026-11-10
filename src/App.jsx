@@ -330,19 +330,20 @@ if (showSpareRibs) {
     View Recipes →
   </button>
 </article>
+
 <article id="weekend-pour" className="feature-card">
-  <div className="feature-icon"><img
-  src="/images/bourbon/birddog-bourbon.jpeg"
-  alt="Bird Dog Select Reserve bourbon"
-  className="feature-photo"
-/></div>
+  <img
+    src="/images/bourbon/birddog-bourbon.jpeg"
+    alt="Bird Dog Select Reserve bourbon"
+    className="feature-photo"
+  />
+
 
   <h3>The Weekend Pour</h3>
 
   <p>
-    A casual look at bourbon, from the first aroma
-    to the final sip. Real bottles, real tasting notes,
-    and honest reviews.
+    Real bottles, real tasting notes,
+    and real honest reviews.
   </p>
 
   <span>Bourbon Reviews</span>
