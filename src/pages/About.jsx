@@ -1,4 +1,6 @@
 
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+
 export default function About() {
   return (
     <main className="about-page">
@@ -18,13 +20,55 @@ export default function About() {
         <section className="about-intro">
           
            
-<div className="about-photo">
-  <img
-    src="/images/about/thelegend.png"
-    alt="Brandon wearing his BBQ apron in the backyard"
-    className="about-profile-image"
-  />
+
+<div className="about-photo-section">
+  <div className="about-photo">
+    <img
+      src="/images/about/thelegend.png"
+      alt="Brandon wearing his BBQ apron in the backyard"
+      className="about-profile-image"
+    />
+  </div>
+
+  <div className="about-socials">
+    <h3>Follow Along</h3>
+
+    
+<div className="about-social-links">
+  <a
+    href="https://www.facebook.com/salvadorsown/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on Facebook"
+    title="Facebook"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://www.instagram.com/yourmomshero/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on Instagram"
+    title="Instagram"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@salvadorsown?lang=en"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow on TikTok"
+    title="TikTok"
+  >
+    <FaTiktok />
+  </a>
 </div>
+
+  </div>
+</div>
+
 
 
           <div className="about-intro-text">

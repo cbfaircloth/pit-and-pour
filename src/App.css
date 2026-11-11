@@ -1126,3 +1126,90 @@
 .feature-card > span {
   margin-bottom: 15px;
 }
+
+/* =========================================
+   ABOUT PAGE - SOCIAL MEDIA LINKS
+   ========================================= */
+
+.about-photo-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.about-socials {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.about-socials h3 {
+  color: #f3ebdd;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.about-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid #d47b35;
+  border-radius: 8px;
+  background: #222426;
+  color: #f3ebdd;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.about-social-links a:hover {
+  background: #d47b35;
+  color: #17191b;
+}
+
+.about-social-links a:focus-visible {
+  outline: 2px solid #f3ebdd;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   ABOUT PAGE - SOCIAL ICON BUTTONS
+   ========================================= */
+
+.about-social-links a {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #d47b35;
+  border-radius: 10px;
+  background: #222426;
+  color: #f3ebdd;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.about-social-links a:hover {
+  background: #d47b35;
+  color: #17191b;
+  transform: translateY(-3px);
+}
+
+.about-social-links a svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
