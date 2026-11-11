@@ -1,5 +1,20 @@
+import { useState, useEffect } from "react";
+
 
 export default function CheesySausagePotatoes() {
+  const [enlargedPhoto, setEnlargedPhoto] = useState(null);
+
+  useEffect(() => {
+    if (!enlargedPhoto) return;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setEnlargedPhoto(null);
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [enlargedPhoto]);
+
   return (
     <div className="recipe-content">
       <p className="recipe-category">THE KITCHEN / SKILLET DINNERS</p>
@@ -12,13 +27,20 @@ export default function CheesySausagePotatoes() {
         satisfying family dinner.
       </p>
 
-      <section className="recipe-gallery">
+      <section className="recipe-gallery kitchen-gallery">
         <div className="recipe-gallery-item">
-          <img
-            src="/images/food/cheesy-potatoes-sausage.jpeg"
-            alt="Homemade cheesy sausage and potatoes skillet"
-            loading="lazy"
-          />
+          <button
+            type="button"
+            className="kitchen-photo-button"
+            onClick={() => setEnlargedPhoto("/images/food/cheesy-potatoes-sausage.jpeg")}
+            aria-label="Enlarge cheesy sausage and potatoes skillet photo"
+          >
+            <img
+              src="/images/food/cheesy-potatoes-sausage.jpeg"
+              alt="Homemade cheesy sausage and potatoes skillet"
+              loading="lazy"
+            />
+          </button>
 
           <div className="recipe-gallery-caption">
             <span>01 / FINISHED DISH</span>
@@ -146,6 +168,34 @@ export default function CheesySausagePotatoes() {
   </p>
 </section>
 
+      {enlargedPhoto && (
+        <div
+          className="bourbon-lightbox"
+          role="presentation"
+          onClick={() => setEnlargedPhoto(null)}
+        >
+          <div
+            className="bourbon-lightbox-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Enlarged cheesy sausage and potatoes photograph"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="bourbon-lightbox-close"
+              onClick={() => setEnlargedPhoto(null)}
+              aria-label="Close enlarged photograph"
+            >
+              ×
+            </button>
+            <img
+              src={enlargedPhoto}
+              alt="Enlarged cheesy sausage and potatoes skillet"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function CollectionPage({
               <button
                 key={item.id}
                 type="button"
-                className="collection-card"
+                className={`collection-card${title === "The Kitchen" ? " kitchen-collection-card" : ""}`}
                 onClick={() => onSelect(item.id)}
               >
                 {item.image && (

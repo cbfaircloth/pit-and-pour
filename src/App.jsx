@@ -3,6 +3,7 @@ import './App.css'
 import { useState } from "react";
 import SpareRibs from "./pages/SpareRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
+import CheesyBeefRice from "./pages/CheesyBeefRice";
 import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
@@ -15,6 +16,9 @@ function App() {
   showCheesySausagePotatoes,
   setShowCheesySausagePotatoes
 ] = useState(false);
+
+const [showCheesyBeefRice, setShowCheesyBeefRice] = useState(false);
+
 const [showBirdDogSelectReserve, setShowBirdDogSelectReserve] = useState(false);
 const [showAbout, setShowAbout] = useState(false);
 
@@ -36,6 +40,8 @@ const collections = {
   },
 
  
+
+  
 kitchen: {
   title: "The Kitchen",
   description:
@@ -48,8 +54,16 @@ kitchen: {
         "Golden potatoes, browned smoked sausage, and plenty of melted cheddar cheese. An easy, hearty skillet dinner!",
       image: "/images/food/cheesy-potatoes-sausage.jpeg",
     },
+    {
+      id: "cheesy-beef-rice",
+      title: "Cheesy Beef & Rice Skillet",
+      description:
+        "Two pounds of seasoned ground beef, tender rice, Rotel, and plenty of melted cheddar cheese. One skillet, easy ingredients, and a whole lot of good eating!",
+      image: "/images/food/cheesy-beef-rice.jpeg",
+    },
   ],
 },
+
 
 
   "weekend-pour": {
@@ -121,6 +135,14 @@ onSelect={(id) => {
     window.scrollTo(0, 0);
   }
 
+
+if (id === "cheesy-beef-rice") {
+  setShowCheesyBeefRice(true);
+  setActiveCollection(null);
+  window.scrollTo(0, 0);
+}
+
+
 if (id === "bird-dog-select-reserve") {
   setShowBirdDogSelectReserve(true);
   setActiveCollection(null);
@@ -181,6 +203,30 @@ if (showCheesySausagePotatoes) {
 
         <CheesySausagePotatoes />
       </div>
+      <Footer />
+    </div>
+  );
+}
+
+if (showCheesyBeefRice) {
+  return (
+    <div className="recipe-page">
+      <div className="recipe-page-container">
+        <button
+          type="button"
+          className="recipe-button recipe-back-button"
+          onClick={() => {
+            setShowCheesyBeefRice(false);
+            setActiveCollection("kitchen");
+            window.scrollTo(0, 0);
+          }}
+        >
+          ← Back to The Kitchen
+        </button>
+
+        <CheesyBeefRice />
+      </div>
+
       <Footer />
     </div>
   );
