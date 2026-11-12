@@ -8,6 +8,7 @@ import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
 import About from "./pages/About";
+import { recipes } from "./data/recipes";
 
 function App()  {
   const navigate = useNavigate();
@@ -15,19 +16,11 @@ function App()  {
 
   const collections = {
   smokehouse: {
-    title: "The Smokehouse",
-    description:
-      "Real backyard BBQ, smoked low and slow. Browse the cooks, recipes, and lessons learned around the pit.",
-    items: [
-      {
-        id: "spare-ribs",
-        title: "Backyard Smoked Spare Ribs",
-        description:
-          "Two racks of spare ribs smoked on the Traeger Pro 34, wrapped with Butter Bath, and finished with BBQ sauce.",
-        image: "/images/food/spare-ribs-after.jpeg",
-      },
-    ],
-  },
+  title: "The Smokehouse",
+  description:
+    "Real backyard BBQ, smoked low and slow. Browse the cooks, recipes, and lessons learned around the pit.",
+  items: recipes.filter((recipe) => recipe.category === "smokehouse"),
+},
 
  
 
@@ -36,22 +29,7 @@ kitchen: {
   title: "The Kitchen",
   description:
     "Easy, affordable, and delicious meals for the whole family. Welcome to the Pit & Pour digital cookbook.",
-  items: [
-    {
-      id: "cheesy-sausage-potatoes",
-      title: "Cheesy Sausage & Potatoes Skillet",
-      description:
-        "Golden potatoes, browned smoked sausage, and plenty of melted cheddar cheese. An easy, hearty skillet dinner!",
-      image: "/images/food/cheesy-potatoes-sausage.jpeg",
-    },
-    {
-      id: "cheesy-beef-rice",
-      title: "Cheesy Beef & Rice Skillet",
-      description:
-        "Two pounds of seasoned ground beef, tender rice, Rotel, and plenty of melted cheddar cheese. One skillet, easy ingredients, and a whole lot of good eating!",
-      image: "/images/food/cheesy-beef-rice.jpeg",
-    },
-  ],
+  items: recipes.filter((recipe) => recipe.category === "kitchen"),
 },
 
 
