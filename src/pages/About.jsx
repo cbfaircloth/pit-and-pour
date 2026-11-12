@@ -127,6 +127,29 @@ export default function About() {
   Good food, a little determination, and a whole lot
   of smoke!
 </p>
+<p>
+  At the end of the day, that's really what Pit &amp; Pour
+  is all about. I hope the recipes I share here bring a
+  little warmth to your home, some good food to your table,
+  and plenty of full bellies around it. If something I
+  cook inspires you to fire up the smoker or try something
+  new in the kitchen, then I'd say this whole thing is
+  worth it.
+</p>
+
+<div className="about-personal-signature">
+  <p>Thanks for stopping by, and happy cooking!</p>
+
+  <img
+    src="/images/copper-signature.png"
+    alt="Brandon's handwritten signature"
+    className="about-signature-image"
+  />
+
+  <span className="about-signature-caption">
+    FOUNDER • PIT &amp; POUR
+  </span>
+</div>
 
           </div>
         </section>
