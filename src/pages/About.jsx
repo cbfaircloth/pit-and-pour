@@ -1,5 +1,5 @@
 
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -36,7 +36,7 @@ export default function About() {
     
 <div className="about-social-links">
   <a
-    href="https://www.facebook.com/salvadorsown/"
+    href="https://www.facebook.com/profile.php?id=61596385983247"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Follow on Facebook"
