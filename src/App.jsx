@@ -1,6 +1,6 @@
 
 import './App.css'
-import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import SpareRibs from "./pages/SpareRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
 import CheesyBeefRice from "./pages/CheesyBeefRice";
@@ -9,21 +9,11 @@ import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
 import About from "./pages/About";
 
-function App() {
-  const [showSpareRibs, setShowSpareRibs] = useState(false);
-  const [activeCollection, setActiveCollection] = useState(null);
-    const [
-  showCheesySausagePotatoes,
-  setShowCheesySausagePotatoes
-] = useState(false);
+function App()  {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-const [showCheesyBeefRice, setShowCheesyBeefRice] = useState(false);
-
-const [showBirdDogSelectReserve, setShowBirdDogSelectReserve] = useState(false);
-const [showAbout, setShowAbout] = useState(false);
-
-
-const collections = {
+  const collections = {
   smokehouse: {
     title: "The Smokehouse",
     description:
@@ -85,7 +75,7 @@ items: [
 };
 
 
-if (showAbout) {
+if (location.pathname === "/about") {
   return (
     <>
       <div className="about-back-container">
@@ -93,9 +83,9 @@ if (showAbout) {
           type="button"
           className="recipe-button recipe-back-button"
           onClick={() => {
-            setShowAbout(false);
-            window.scrollTo(0, 0);
-          }}
+  navigate("/");
+  window.scrollTo(0, 0);
+}}
         >
           ← Back to Pit &amp; Pour
         </button>
@@ -108,8 +98,17 @@ if (showAbout) {
 }
 
 
-if (activeCollection && collections[activeCollection]) {
-  const collection = collections[activeCollection];
+const collectionKey =
+  location.pathname === "/kitchen"
+    ? "kitchen"
+    : location.pathname === "/smokehouse"
+    ? "smokehouse"
+    : location.pathname === "/weekend-pour"
+    ? "weekend-pour"
+    : null;
+
+if (collectionKey && collections[collectionKey]) {
+  const collection = collections[collectionKey];
 
   return (
     <div>
@@ -118,34 +117,30 @@ if (activeCollection && collections[activeCollection]) {
         description={collection.description}
         items={collection.items}
         onBack={() => {
-          setActiveCollection(null);
-          window.scrollTo(0, 0);
-        }}
+  navigate("/");
+  window.scrollTo(0, 0);
+}}
        
 onSelect={(id) => {
   if (id === "spare-ribs") {
-    setShowSpareRibs(true);
-    setActiveCollection(null);
-    window.scrollTo(0, 0);
-  }
+  navigate("/smokehouse/spare-ribs");
+  window.scrollTo(0, 0);
+}
 
   if (id === "cheesy-sausage-potatoes") {
-    setShowCheesySausagePotatoes(true);
-    setActiveCollection(null);
-    window.scrollTo(0, 0);
-  }
-
-
-if (id === "cheesy-beef-rice") {
-  setShowCheesyBeefRice(true);
-  setActiveCollection(null);
+  navigate("/kitchen/cheesy-sausage-potatoes");
   window.scrollTo(0, 0);
 }
 
 
+if (id === "cheesy-beef-rice") {
+navigate("/kitchen/cheesy-beef-rice");
+window.scrollTo(0, 0);
+
+}
+
 if (id === "bird-dog-select-reserve") {
-  setShowBirdDogSelectReserve(true);
-  setActiveCollection(null);
+  navigate("/weekend-pour/bird-dog-select-reserve");
   window.scrollTo(0, 0);
 }
 
@@ -158,7 +153,7 @@ if (id === "bird-dog-select-reserve") {
 }
 
 
-if (showBirdDogSelectReserve) {
+if (location.pathname === "/weekend-pour/bird-dog-select-reserve") {
   return (
     <div>
       <div
@@ -169,10 +164,9 @@ if (showBirdDogSelectReserve) {
           type="button"
           className="recipe-button recipe-back-button"
           onClick={() => {
-            setShowBirdDogSelectReserve(false);
-            setActiveCollection("weekend-pour");
-            window.scrollTo(0, 0);
-          }}
+  navigate("/weekend-pour");
+  window.scrollTo(0, 0);
+}}
         >
           ← Back to The Weekend Pour
         </button>
@@ -185,7 +179,7 @@ if (showBirdDogSelectReserve) {
 }
 
 
-if (showCheesySausagePotatoes) {
+if (location.pathname === "/kitchen/cheesy-sausage-potatoes") {
   return (
     <div className="recipe-page">
       <div className="recipe-page-container">
@@ -193,10 +187,9 @@ if (showCheesySausagePotatoes) {
           type="button"
           className="recipe-button recipe-back-button"
           onClick={() => {
-            setShowCheesySausagePotatoes(false);
-            setActiveCollection("kitchen");
-            window.scrollTo(0, 0);
-          }}
+  navigate("/kitchen");
+  window.scrollTo(0, 0);
+}}
         >
           ← Back to The Kitchen
         </button>
@@ -208,7 +201,7 @@ if (showCheesySausagePotatoes) {
   );
 }
 
-if (showCheesyBeefRice) {
+if (location.pathname === "/kitchen/cheesy-beef-rice") {
   return (
     <div className="recipe-page">
       <div className="recipe-page-container">
@@ -216,10 +209,9 @@ if (showCheesyBeefRice) {
           type="button"
           className="recipe-button recipe-back-button"
           onClick={() => {
-            setShowCheesyBeefRice(false);
-            setActiveCollection("kitchen");
-            window.scrollTo(0, 0);
-          }}
+  navigate("/kitchen");
+  window.scrollTo(0, 0);
+}}
         >
           ← Back to The Kitchen
         </button>
@@ -232,7 +224,7 @@ if (showCheesyBeefRice) {
   );
 }
 
-if (showSpareRibs) {
+if (location.pathname === "/smokehouse/spare-ribs") {
   return (
     <div className="recipe-page">
       <div className="recipe-page-container">
@@ -240,11 +232,11 @@ if (showSpareRibs) {
           type="button"
           className="recipe-button recipe-back-button"
           onClick={() => {
-            setShowSpareRibs(false);
-            window.scrollTo(0, 0);
-          }}
+  navigate("/smokehouse");
+  window.scrollTo(0, 0);
+}}
         >
-          ← Back to Pit & Pour
+          ← Back to The Smokehouse
         </button>
 
         <SpareRibs />
@@ -271,9 +263,9 @@ if (showSpareRibs) {
   type="button"
   className="nav-link-button"
   onClick={() => {
-    setShowAbout(true);
-    window.scrollTo(0, 0);
-  }}
+  navigate("/about");
+  window.scrollTo(0, 0);
+}}
 >
   About
 </button>
@@ -341,7 +333,7 @@ if (showSpareRibs) {
   type="button"
   className="recipe-button"
   onClick={() => {
-  setActiveCollection("smokehouse");
+  navigate("/smokehouse");
   window.scrollTo(0, 0);
 }}
 >
@@ -369,9 +361,9 @@ if (showSpareRibs) {
     type="button"
     className="recipe-button"
     onClick={() => {
-      setActiveCollection("kitchen");
-      window.scrollTo(0, 0);
-    }}
+  navigate("/kitchen");
+  window.scrollTo(0, 0);
+}}
   >
     View Recipes →
   </button>
@@ -398,9 +390,9 @@ if (showSpareRibs) {
     type="button"
     className="recipe-button"
     onClick={() => {
-      setActiveCollection("weekend-pour");
-      window.scrollTo(0, 0);
-    }}
+  navigate("/weekend-pour");
+  window.scrollTo(0, 0);
+}}
   >
     View Reviews →
   </button>
