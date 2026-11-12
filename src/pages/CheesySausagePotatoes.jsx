@@ -20,6 +20,13 @@ export default function CheesySausagePotatoes() {
       <p className="recipe-category">THE KITCHEN / SKILLET DINNERS</p>
 
       <h1>Cheesy Sausage &amp; Potatoes Skillet</h1>
+      <button
+  type="button"
+  className="recipe-button print-recipe-button"
+  onClick={() => window.print()}
+>
+  🖨️ Print Recipe
+</button>
 
       <p className="recipe-intro">
         Golden potatoes, browned smoked sausage, and melted

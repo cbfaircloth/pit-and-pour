@@ -7,6 +7,13 @@ export default function SpareRibs() {
       </p>
 
       <h1>Backyard Smoked Spare Ribs</h1>
+      <button
+  type="button"
+  className="recipe-button print-recipe-button"
+  onClick={() => window.print()}
+>
+  🖨️ Print Recipe
+</button>
 
       <p className="article-intro">
         Two racks of spare ribs, smoked low and slow,

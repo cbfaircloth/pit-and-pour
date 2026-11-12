@@ -1269,3 +1269,89 @@
     height: 240px;
   }
 }
+/* Pit & Pour - Print Recipe Button */
+.print-recipe-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 12px 20px;
+  gap: 8px;
+}
+/* ==========================================
+   PIT & POUR - PRINTABLE RECIPES
+   ========================================== */
+
+@media print {
+
+  /* Clean white paper and readable text */
+  body,
+  #root,
+  .recipe-content {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide unnecessary website elements */
+  header,
+  nav,
+  footer,
+  .recipe-gallery,
+  .print-recipe-button,
+  .recipe-back-button,
+  .bourbon-lightbox {
+    display: none !important;
+  }
+
+  /* Recipe layout */
+  .recipe-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Recipe title */
+  .recipe-content h1 {
+    color: #000000 !important;
+    font-size: 24pt !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Section headings */
+  .recipe-content h2 {
+    color: #000000 !important;
+    font-size: 16pt !important;
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* All recipe text */
+  .recipe-content p,
+  .recipe-content li,
+  .recipe-content strong,
+  .recipe-category {
+    color: #000000 !important;
+  }
+
+  /* Keep cooking steps together */
+  .recipe-instructions li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Avoid printing colored panels */
+  .recipe-instructions,
+  .recipe-instructions ul,
+  .recipe-instructions ol,
+  .recipe-instructions li {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Print-friendly text size */
+  .recipe-instructions {
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+}

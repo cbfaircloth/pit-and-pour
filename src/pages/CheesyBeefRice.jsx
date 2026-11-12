@@ -20,6 +20,13 @@ export default function CheesyBeefRice() {
       </p>
 
       <h1>Cheesy Beef &amp; Rice Skillet</h1>
+      <button
+  type="button"
+  className="recipe-button print-recipe-button"
+  onClick={() => window.print()}
+>
+  🖨️ Print Recipe
+</button>
 
       <p className="recipe-intro">
         Some nights, I just want something good for dinner
