@@ -1,6 +1,8 @@
+
 export const recipes = [
   {
     id: "cheesy-beef-rice",
+    publishOrder: 2,
     title: "Cheesy Beef & Rice Skillet",
     description:
       "Two pounds of seasoned ground beef, tender rice, Rotel, and plenty of melted cheddar cheese. One skillet, easy ingredients, and a whole lot of good eating!",
@@ -21,6 +23,7 @@ export const recipes = [
   },
   {
     id: "cheesy-sausage-potatoes",
+    publishOrder: 1,
     title: "Cheesy Sausage & Potatoes Skillet",
     description:
       "Golden potatoes, browned smoked sausage, and plenty of melted cheddar cheese. An easy, hearty skillet dinner!",
@@ -40,6 +43,7 @@ export const recipes = [
   },
   {
     id: "spare-ribs",
+    publishOrder: 3,
     title: "Backyard Smoked Spare Ribs",
     description:
       "Two racks of spare ribs smoked on the Traeger Pro 34, wrapped with Butter Bath, and finished with BBQ sauce.",
