@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import SpareRibs from "./pages/SpareRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
 import CheesyBeefRice from "./pages/CheesyBeefRice";
+import KoreanBeefBowl from "./pages/KoreanBeefBowl";
 import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import PenelopeBarrelStrength from "./pages/PenelopeBarrelStrength";
 import Footer from "./components/Footer";
@@ -118,6 +119,10 @@ function App() {
               navigate("/kitchen/cheesy-beef-rice");
               window.scrollTo(0, 0);
             }
+            if (id === "korean-beef-bowl") {
+  navigate("/kitchen/korean-beef-bowl");
+  window.scrollTo(0, 0);
+}
 
             if (id === "bird-dog-select-reserve") {
               navigate("/weekend-pour/bird-dog-select-reserve");
@@ -241,6 +246,30 @@ if (
           </button>
 
           <CheesyBeefRice />
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
+
+  // Korean Beef Bowls recipe
+  if (location.pathname === "/kitchen/korean-beef-bowl") {
+    return (
+      <div className="recipe-page">
+        <div className="recipe-page-container">
+          <button
+            type="button"
+            className="recipe-button recipe-back-button"
+            onClick={() => {
+              navigate("/kitchen");
+              window.scrollTo(0, 0);
+            }}
+          >
+            ← Back to The Kitchen
+          </button>
+
+          <KoreanBeefBowl />
         </div>
 
         <Footer />

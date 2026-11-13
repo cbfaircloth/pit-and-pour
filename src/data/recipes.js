@@ -64,4 +64,30 @@ export const recipes = [
       "Weekend Cook",
     ],
   },
+  {
+    id: "korean-beef-bowl",
+    publishOrder: 4,
+    title: "Korean Beef Bowls",
+    description:
+      "Sweet and savory Korean-inspired ground beef served over fluffy white rice. A quick, affordable family dinner that's packed with flavor and ready in about 30 minutes!",
+    image: "/images/food/korean-beef-bowl.jpeg",
+    category: "kitchen",
+    url: "/kitchen/korean-beef-bowl",
+    ingredients: [
+      "ground beef",
+      "garlic",
+      "ground ginger",
+      "soy sauce",
+      "light brown sugar",
+      "sesame oil",
+      "white rice",
+      "green onions",
+    ],
+    tags: [
+      "Beef",
+      "Budget Friendly",
+      "Family Dinner",
+      "Quick & Easy",
+    ],
+  },
 ];
