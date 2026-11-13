@@ -5,6 +5,7 @@ import SpareRibs from "./pages/SpareRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
 import CheesyBeefRice from "./pages/CheesyBeefRice";
 import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
+import PenelopeBarrelStrength from "./pages/PenelopeBarrelStrength";
 import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
 import About from "./pages/About";
@@ -122,13 +123,46 @@ function App() {
               navigate("/weekend-pour/bird-dog-select-reserve");
               window.scrollTo(0, 0);
             }
+            if (id === "penelope-barrel-strength") {
+  navigate("/weekend-pour/penelope-barrel-strength");
+  window.scrollTo(0, 0);
+}
           }}
         />
         <Footer />
       </div>
     );
   }
+if (
+  location.pathname ===
+  "/weekend-pour/penelope-barrel-strength"
+) {
+  return (
+    <div>
+      <div
+        className="recipe-page-container"
+        style={{
+          paddingTop: "30px",
+          paddingBottom: "0",
+        }}
+      >
+        <button
+          type="button"
+          className="recipe-button recipe-back-button"
+          onClick={() => {
+            navigate("/weekend-pour");
+            window.scrollTo(0, 0);
+          }}
+        >
+          ← Back to The Weekend Pour
+        </button>
+      </div>
 
+      <PenelopeBarrelStrength />
+      <Footer />
+    </div>
+  );
+}
   // Bourbon review page
   if (
     location.pathname ===
