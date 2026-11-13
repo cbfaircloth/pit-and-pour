@@ -44,7 +44,7 @@ export default function KoreanBeefBowl() {
         in the kitchen all evening. That's where these
         Korean Beef Bowls come in! Two pounds of ground
         beef cooked in a sweet and savory sauce, served
-        over a bed of white rice. Nothing complicated,
+        over a bed of jasmine rice. Nothing complicated,
         just a quick, filling meal that's packed with
         flavor and easy enough for a busy weeknight!
       </p>
@@ -70,7 +70,7 @@ export default function KoreanBeefBowl() {
             <p>
               Seasoned ground beef tossed in a sweet
               and savory sauce, served over fluffy
-              white rice. Simple ingredients and
+              jasmine rice. Simple ingredients and
               a whole lot of flavor!
             </p>
           </div>

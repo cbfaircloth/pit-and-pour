@@ -12,6 +12,7 @@ import CollectionPage from "./components/CollectionPage";
 import About from "./pages/About";
 import { recipes } from "./data/recipes";
 import { bourbonReviews } from "./data/bourbonReviews";
+import RecipeHeader from "./components/RecipeHeader";
 
 // Automatically find the newest published recipe in a collection.
 const getLatestRecipe = (category) => {
@@ -208,6 +209,7 @@ if (
     return (
       <div className="recipe-page">
         <div className="recipe-page-container">
+          <RecipeHeader />
           <button
             type="button"
             className="recipe-button recipe-back-button"
@@ -234,6 +236,7 @@ if (
     return (
       <div className="recipe-page">
         <div className="recipe-page-container">
+          <RecipeHeader />
           <button
             type="button"
             className="recipe-button recipe-back-button"
@@ -258,6 +261,7 @@ if (
     return (
       <div className="recipe-page">
         <div className="recipe-page-container">
+          <RecipeHeader />
           <button
             type="button"
             className="recipe-button recipe-back-button"
@@ -282,6 +286,7 @@ if (
     return (
       <div className="recipe-page">
         <div className="recipe-page-container">
+          <RecipeHeader />
           <button
             type="button"
             className="recipe-button recipe-back-button"
