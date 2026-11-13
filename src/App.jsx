@@ -341,7 +341,7 @@ if (
           />
 
           <p className="tagline">
-            Good Smoke. Good Food. Good Pour.
+            Smoke Has a Story. So Does Every Pour.
           </p>
 
           <p className="description">

@@ -231,7 +231,7 @@ export default function About() {
           </p>
 
           <p className="about-signoff">
-            Good Smoke. Good Food. Good Pour.
+            "Smoke Has a Story. So Does Every Pour."
           </p>
         </section>
       </div>

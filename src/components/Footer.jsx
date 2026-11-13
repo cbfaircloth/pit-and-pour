@@ -9,7 +9,7 @@ export default function Footer() {
           <h3>
             PIT <span>&amp;</span> POUR
           </h3>
-          <p>Good Smoke. Good Food. Good Pour.</p>
+          <p>"Smoke Has a Story. So Does Every Pour."</p>
         </div>
 
         <div className="footer-bottom">

@@ -217,7 +217,7 @@ export default function PenelopeBarrelStrength() {
           </p>
 
           <p>
-            <em>Good Smoke. Good Food. Good Pour.</em>
+            <em>Smoke Has a Story. So Does Every Pour.</em>
           </p>
         </section>
       </div>
