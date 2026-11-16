@@ -47,12 +47,15 @@
   color: #d47735;
 }
 
+
 .tagline {
+  font-family: 'Great Vibes', cursive;
   color: #d47735;
   font-size: clamp(20px, 3vw, 28px);
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 18px;
 }
+
 
 .description {
   color: #c9c2b8;
@@ -1016,13 +1019,16 @@
   padding: 40px;
 }
 
+
 .about-signoff {
+  font-family: 'Great Vibes', cursive;
   color: #d47b35 !important;
   font-size: 20px !important;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 25px !important;
   margin-bottom: 0 !important;
 }
+
 
 /* About page - Mobile */
 
