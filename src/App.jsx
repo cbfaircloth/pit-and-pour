@@ -5,6 +5,8 @@ import SpareRibs from "./pages/SpareRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
 import CheesyBeefRice from "./pages/CheesyBeefRice";
 import KoreanBeefBowl from "./pages/KoreanBeefBowl";
+import MexicanPizza from "./pages/MexicanPizza";
+import Esquites from "./pages/Esquites";
 import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import PenelopeBarrelStrength from "./pages/PenelopeBarrelStrength";
 import Footer from "./components/Footer";
@@ -124,6 +126,17 @@ function App() {
   navigate("/kitchen/korean-beef-bowl");
   window.scrollTo(0, 0);
 }
+
+if (id === "mexican-pizza") {
+  navigate("/kitchen/mexican-pizza");
+  window.scrollTo(0, 0);
+}
+
+if (id === "esquites") {
+  navigate("/kitchen/esquites");
+  window.scrollTo(0, 0);
+}
+
 
             if (id === "bird-dog-select-reserve") {
               navigate("/weekend-pour/bird-dog-select-reserve");
@@ -274,6 +287,58 @@ if (
           </button>
 
           <KoreanBeefBowl />
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
+
+  // Mexican Pizza recipe
+  if (location.pathname === "/kitchen/mexican-pizza") {
+    return (
+      <div className="recipe-page">
+        <div className="recipe-page-container">
+          <RecipeHeader />
+
+          <button
+            type="button"
+            className="recipe-button recipe-back-button"
+            onClick={() => {
+              navigate("/kitchen");
+              window.scrollTo(0, 0);
+            }}
+          >
+            ← Back to The Kitchen
+          </button>
+
+          <MexicanPizza />
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
+
+  // Homemade Esquites recipe
+  if (location.pathname === "/kitchen/esquites") {
+    return (
+      <div className="recipe-page">
+        <div className="recipe-page-container">
+          <RecipeHeader />
+
+          <button
+            type="button"
+            className="recipe-button recipe-back-button"
+            onClick={() => {
+              navigate("/kitchen");
+              window.scrollTo(0, 0);
+            }}
+          >
+            ← Back to The Kitchen
+          </button>
+
+          <Esquites />
         </div>
 
         <Footer />
