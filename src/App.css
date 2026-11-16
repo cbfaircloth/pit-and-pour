@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 #root {
   min-height: 100vh;
   width: 100%;
@@ -1601,11 +1601,10 @@
 }
 
 .recipe-brand-tagline {
-  margin: 18px 0 0;
-  color: #d97832;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  color: #d47735;
 }
 
 @media (max-width: 600px) {
