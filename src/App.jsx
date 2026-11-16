@@ -1,5 +1,9 @@
 
 import './App.css'
+import './Christmas.css';
+
+import ChristmasSnowfall from "./components/ChristmasSnowfall";
+
 import { useNavigate, useLocation } from "react-router-dom";
 import SpareRibs from "./pages/SpareRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
@@ -30,9 +34,12 @@ const latestBourbonReview = [...bourbonReviews].sort(
   (a, b) => b.publishOrder - a.publishOrder
 )[0];
 
-function App() {
+function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
+
+    // Temporary Christmas theme
+  document.body.classList.add("christmas-theme");
 
   const collections = {
     smokehouse: {
@@ -405,7 +412,7 @@ if (
       <main id="home" className="welcome">
         <div className="welcome-content">
           <img
-            src="/images/branding/pit-and-pour-logo.png"
+            src="/images/branding/pit-and-pour-christmas.png"
             alt="Pit & Pour — Smoke, Food & Bourbon"
             className="brand-logo"
           />
@@ -572,6 +579,15 @@ if (
       </section>
 
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <ChristmasSnowfall />
+      <AppContent />
     </>
   );
 }

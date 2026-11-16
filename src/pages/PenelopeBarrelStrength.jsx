@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import RecipeHeader from "../components/RecipeHeader";
 
 export default function PenelopeBarrelStrength() {
   const [enlargedPhoto, setEnlargedPhoto] = useState(null);
@@ -50,6 +51,7 @@ export default function PenelopeBarrelStrength() {
   return (
     <main className="recipe-page">
       <div className="recipe-page-container">
+        <RecipeHeader />
         <div className="recipe-header">
           <span className="recipe-category">
             THE WEEKEND POUR / BOURBON REVIEWS

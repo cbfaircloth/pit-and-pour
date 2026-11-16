@@ -1,0 +1,614 @@
+
+/* ==========================================
+   PIT & POUR — CHRISTMAS THEME
+   ========================================== */
+
+:root {
+  --christmas-red: #d92332;
+  --christmas-green: #287b3c;
+  --christmas-cream: #fff4df;
+  --christmas-gold: #d8a64c;
+}
+
+/* Homepage Christmas accents */
+body.christmas-theme .tagline {
+  color: var(--christmas-red);
+}
+
+body.christmas-theme .welcome {
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(105, 27, 24, 0.25) 0%,
+      transparent 70%
+    ),
+    #151719;
+}
+
+/* Homepage navigation buttons */
+body.christmas-theme .welcome-links a {
+  border-color: var(--christmas-green);
+  color: var(--christmas-cream);
+}
+
+body.christmas-theme .welcome-links a:nth-child(2) {
+  border-color: var(--christmas-red);
+}
+
+body.christmas-theme .welcome-links a:hover {
+  background: var(--christmas-green);
+  color: white;
+}
+
+/* Site-wide buttons */
+body.christmas-theme .recipe-button {
+  border-color: var(--christmas-green);
+  color: var(--christmas-cream);
+}
+
+body.christmas-theme .recipe-button:hover {
+  background: var(--christmas-green);
+  color: white;
+}
+
+/* Recipe headings */
+body.christmas-theme .recipe-category,
+body.christmas-theme .collection-eyebrow {
+  color: var(--christmas-red);
+}
+
+/* Collection card accents */
+body.christmas-theme .collection-card {
+  border-color: rgba(40, 123, 60, 0.5);
+}
+
+body.christmas-theme .collection-card:hover {
+  border-color: var(--christmas-red);
+}
+
+/* Search and filter accents */
+body.christmas-theme .recipe-search-input:focus {
+  border-color: var(--christmas-green);
+  outline-color: var(--christmas-green);
+}
+
+body.christmas-theme .recipe-tag-button.active {
+  background: var(--christmas-green);
+  border-color: var(--christmas-green);
+  color: white;
+}
+
+/* Site navigation */
+body.christmas-theme .site-name span {
+  color: var(--christmas-red);
+}
+
+body.christmas-theme .main-nav a:hover,
+body.christmas-theme .nav-link-button:hover {
+  color: var(--christmas-red);
+}
+
+/* Recipe directions */
+body.christmas-theme .recipe-instructions li::marker {
+  color: var(--christmas-red);
+}
+
+/* Christmas accents on recipe headers */
+body.christmas-theme .recipe-brand-tagline {
+  color: var(--christmas-red);
+}
+
+/* Footer accent */
+body.christmas-theme footer {
+  border-top-color: var(--christmas-green);
+}
+
+/* ==========================================
+   PIT & POUR — SITE-WIDE CHRISTMAS OVERRIDES
+   Keep this BELOW the original Christmas CSS.
+   ========================================== */
+
+body.christmas-theme {
+  --holiday-red: #d92332;
+  --holiday-green: #287b3c;
+  --holiday-dark-green: #174d2a;
+  --holiday-cream: #fff4df;
+  --holiday-gold: #e1b85c;
+}
+
+/* HOME PAGE */
+body.christmas-theme .eyebrow,
+body.christmas-theme .section-eyebrow,
+body.christmas-theme .feature-card > span {
+  color: var(--holiday-red);
+}
+
+body.christmas-theme .welcome h1 span,
+body.christmas-theme .site-name span,
+body.christmas-theme .footer-brand h3 span {
+  color: var(--holiday-red);
+}
+
+body.christmas-theme .feature-card {
+  border-color: #31513b;
+}
+
+body.christmas-theme .feature-card:hover {
+  border-color: var(--holiday-green);
+}
+
+/* ALL MAIN BUTTONS */
+body.christmas-theme .recipe-button {
+  background-color: var(--holiday-green);
+  border-color: var(--holiday-green);
+  color: #ffffff;
+}
+
+body.christmas-theme .recipe-button:hover {
+  background-color: var(--holiday-red);
+  border-color: var(--holiday-red);
+  color: #ffffff;
+}
+
+body.christmas-theme .recipe-button:focus-visible,
+body.christmas-theme .collection-card:focus-visible {
+  outline: 3px solid var(--holiday-gold);
+  outline-offset: 3px;
+}
+
+/* COLLECTION PAGES */
+body.christmas-theme .collection-eyebrow,
+body.christmas-theme .collection-card-content span {
+  color: var(--holiday-red);
+}
+
+body.christmas-theme .collection-card {
+  border-color: #31513b;
+}
+
+body.christmas-theme .collection-card:hover {
+  border-color: var(--holiday-red);
+}
+
+/* RECIPE PAGES */
+body.christmas-theme .article-category,
+body.christmas-theme .recipe-category,
+body.christmas-theme .recipe-gallery-caption span,
+body.christmas-theme .recipe-info-item span {
+  color: var(--holiday-red);
+}
+
+body.christmas-theme .recipe-details ul {
+  border-left-color: var(--holiday-green);
+}
+
+body.christmas-theme .recipe-details ol li::before {
+  background-color: var(--holiday-red);
+  color: #ffffff;
+}
+
+body.christmas-theme .recipe-details ul,
+body.christmas-theme .recipe-details ol li,
+body.christmas-theme .recipe-gallery-item,
+body.christmas-theme .recipe-info-item {
+  border-color: #31513b;
+}
+
+/* KITCHEN SEARCH */
+body.christmas-theme .recipe-search-label,
+body.christmas-theme .recipe-tags-label {
+  color: var(--holiday-red);
+}
+
+body.christmas-theme .recipe-search-input {
+  border-color: var(--holiday-green);
+}
+
+body.christmas-theme .recipe-search-input:focus {
+  border-color: var(--holiday-red);
+  box-shadow: 0 0 0 3px rgba(217, 35, 50, 0.2);
+}
+
+/* RECIPE TAGS */
+body.christmas-theme .recipe-tag-button {
+  border-color: var(--holiday-green);
+}
+
+body.christmas-theme .recipe-tag-button:hover {
+  background: var(--holiday-dark-green);
+  border-color: var(--holiday-red);
+}
+
+body.christmas-theme .recipe-tag-button.active {
+  background: var(--holiday-green);
+  border-color: var(--holiday-green);
+  color: #ffffff;
+}
+
+/* CLEAR FILTERS */
+body.christmas-theme .recipe-clear-filters {
+  border-color: var(--holiday-green);
+  color: var(--holiday-cream);
+}
+
+body.christmas-theme .recipe-clear-filters:hover {
+  background: var(--holiday-red);
+  border-color: var(--holiday-red);
+  color: #ffffff;
+}
+
+/* THE WEEKEND POUR & KITCHEN PHOTO VIEWERS */
+body.christmas-theme .bourbon-photo-button:focus-visible,
+body.christmas-theme .kitchen-photo-button:focus-visible {
+  outline-color: var(--holiday-gold);
+}
+
+body.christmas-theme .bourbon-lightbox-close {
+  border-color: var(--holiday-green);
+}
+
+body.christmas-theme .bourbon-lightbox-close:hover {
+  background: var(--holiday-red);
+  border-color: var(--holiday-red);
+  color: #ffffff;
+}
+
+/* ABOUT PAGE */
+body.christmas-theme .about-eyebrow,
+body.christmas-theme .about-feature-label,
+body.christmas-theme .about-signoff,
+body.christmas-theme .about-signature-caption {
+  color: var(--holiday-red) !important;
+}
+
+body.christmas-theme .about-photo,
+body.christmas-theme .about-photo-placeholder {
+  border-color: var(--holiday-green);
+}
+
+body.christmas-theme .about-honesty {
+  border-left-color: var(--holiday-red);
+}
+
+body.christmas-theme .about-feature {
+  border-color: #31513b;
+}
+
+/* SOCIAL MEDIA ICONS */
+body.christmas-theme .about-social-links a {
+  border-color: var(--holiday-green);
+}
+
+body.christmas-theme .about-social-links a:hover {
+  background: var(--holiday-red);
+  border-color: var(--holiday-red);
+  color: #ffffff;
+}
+
+/* NAVIGATION */
+body.christmas-theme .main-nav a:hover,
+body.christmas-theme .main-nav a:focus-visible,
+body.christmas-theme .main-nav .nav-link-button:hover {
+  color: var(--holiday-red);
+}
+
+body.christmas-theme .main-nav .nav-link-button:focus-visible {
+  outline-color: var(--holiday-gold);
+}
+
+/* FOOTER */
+body.christmas-theme .site-footer {
+  border-top-color: var(--holiday-green);
+}
+
+/* RECIPE BRAND HEADER */
+body.christmas-theme .recipe-brand-tagline {
+  color: var(--holiday-red);
+}
+
+/* PRESERVE CLEAN PRINTED RECIPES */
+@media print {
+  body.christmas-theme,
+  body.christmas-theme .recipe-page,
+  body.christmas-theme .recipe-content,
+  body.christmas-theme .recipe-instructions,
+  body.christmas-theme .recipe-instructions li,
+  body.christmas-theme .recipe-details ul,
+  body.christmas-theme .recipe-details ol li {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #dddddd !important;
+  }
+
+  body.christmas-theme .recipe-content h1,
+  body.christmas-theme .recipe-content h2,
+  body.christmas-theme .recipe-content p,
+  body.christmas-theme .recipe-content li,
+  body.christmas-theme .recipe-content strong,
+  body.christmas-theme .recipe-category {
+    color: #000000 !important;
+  }
+
+  body.christmas-theme .recipe-brand-header,
+  body.christmas-theme .print-recipe-button,
+  body.christmas-theme .recipe-back-button,
+  body.christmas-theme .recipe-gallery {
+    display: none !important;
+  }
+}
+
+/* ==========================================
+   PIT & POUR — CHRISTMAS STRING LIGHTS
+   ========================================== */
+
+/* Position decorations within each page */
+body.christmas-theme .welcome,
+body.christmas-theme .recipe-page,
+body.christmas-theme .about-page {
+  position: relative;
+}
+
+/* Christmas bulbs hanging from a wire */
+body.christmas-theme .welcome::before,
+body.christmas-theme .recipe-page::before,
+body.christmas-theme .about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  pointer-events: none;
+  z-index: 2;
+
+  background-image:
+    /* Individual colored bulbs */
+    radial-gradient(ellipse 5px 9px at 12px 18px, #f44336 70%, transparent 75%),
+    radial-gradient(ellipse 5px 9px at 42px 18px, #f5c542 70%, transparent 75%),
+    radial-gradient(ellipse 5px 9px at 72px 18px, #42d66b 70%, transparent 75%),
+    radial-gradient(ellipse 5px 9px at 102px 18px, #5b9dff 70%, transparent 75%),
+
+    /* Bulb sockets */
+    linear-gradient(#3e5842, #3e5842),
+
+    /* Wire */
+    linear-gradient(#405746, #405746);
+
+  background-size:
+    120px 38px,
+    120px 38px,
+    120px 38px,
+    120px 38px,
+    120px 5px,
+    100% 2px;
+
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 9px,
+    0 8px;
+
+  background-repeat:
+    repeat-x,
+    repeat-x,
+    repeat-x,
+    repeat-x,
+    repeat-x,
+    no-repeat;
+}
+
+/* Hide decorations when printing */
+@media print {
+  body.christmas-theme .recipe-page::before {
+    display: none !important;
+  }
+}
+/* ==========================================
+   PIT & POUR — INDIVIDUAL FALLING SNOWFLAKES
+   ========================================== */
+
+/* Fixed snowfall layer */
+body.christmas-theme .christmas-snowfall {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* Individual snowflakes */
+body.christmas-theme .christmas-snowflake {
+  position: absolute;
+  top: -12px;
+  display: block;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  will-change: transform;
+
+  animation-name: pitpour-individual-snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Each snowflake falls and drifts independently */
+@keyframes pitpour-individual-snowfall {
+  0% {
+    transform: translate3d(0, -20px, 0);
+  }
+
+  50% {
+    transform: translate3d(
+      calc(var(--snow-drift) * 0.5),
+      50dvh,
+      0
+    );
+  }
+
+  100% {
+    transform: translate3d(
+      var(--snow-drift),
+      110dvh,
+      0
+    );
+  }
+}
+
+/* Reduce visual intensity on phones */
+@media (max-width: 600px) {
+  body.christmas-theme .christmas-snowflake {
+    box-shadow: none;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  body.christmas-theme .christmas-snowfall {
+    display: none;
+  }
+}
+
+/* Pause snowfall when the tab is hidden */
+body.christmas-theme .christmas-snowfall.is-paused
+.christmas-snowflake {
+  animation-play-state: paused;
+}
+
+/* Never print snowflakes */
+@media print {
+  body.christmas-theme .christmas-snowfall {
+    display: none !important;
+  }
+}
+
+/* ==========================================
+   PIT & POUR — TRADITIONAL CHRISTMAS LIGHTS
+   ========================================== */
+
+/* Rotate the classic Christmas bulb colors */
+@keyframes christmas-light-colors {
+  0%, 100% {
+    background-position:
+      0 0, 0 0, 0 0, 0 0,
+      0 9px, 0 8px;
+  }
+
+  25% {
+    background-position:
+      30px 0, 30px 0, 30px 0, 30px 0,
+      0 9px, 0 8px;
+  }
+
+  50% {
+    background-position:
+      60px 0, 60px 0, 60px 0, 60px 0,
+      0 9px, 0 8px;
+  }
+
+  75% {
+    background-position:
+      90px 0, 90px 0, 90px 0, 90px 0,
+      0 9px, 0 8px;
+  }
+}
+
+/* Move the bulb colors horizontally */
+body.christmas-theme .welcome::before,
+body.christmas-theme .recipe-page::before,
+body.christmas-theme .about-page::before {
+  animation: christmas-light-colors 8s steps(4, end) infinite;
+}
+
+
+/* ==========================================
+   PIT & POUR — CHRISTMAS ABOUT PAGE
+   ========================================== */
+
+/* Original photo remains untouched */
+body.christmas-theme .about-photo {
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+}
+
+/* Evergreen garland around the full frame */
+body.christmas-theme .about-photo::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: 3;
+  pointer-events: none;
+
+  background-image: url(
+    "/images/branding/pit-pour-garland-frame.png"
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* Santa hat hanging over upper-left corner */
+body.christmas-theme .about-photo::after {
+  content: "";
+  position: absolute;
+  top: -65px;
+  left: -48px;
+  width: 175px;
+  height: 125px;
+  z-index: 4;
+  pointer-events: none;
+
+  background-image: url(
+    "/images/branding/pit-pour-santa-hat.png"
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  transform: rotate(-12deg);
+}
+
+/* Keep the original Christmas-red signature */
+body.christmas-theme .about-signature-image {
+  filter: brightness(0) saturate(100%)
+    invert(24%) sepia(94%) saturate(1950%)
+    hue-rotate(344deg) brightness(105%);
+}
+
+/* Remove the old signature decoration */
+body.christmas-theme
+.about-personal-signature::after {
+  content: none;
+}
+
+/* Adjust decorations on smaller screens */
+@media (max-width: 600px) {
+  body.christmas-theme .about-photo::before {
+    inset: -12px;
+  }
+
+  body.christmas-theme .about-photo::after {
+    width: 130px;
+    height: 100px;
+    top: -48px;
+    left: -28px;
+  }
+}
+
+/* Don't print Christmas decorations */
+@media print {
+  body.christmas-theme .about-photo::before,
+  body.christmas-theme .about-photo::after {
+    display: none !important;
+  }
+
+  body.christmas-theme .about-signature-image {
+    filter: none !important;
+  }
+}

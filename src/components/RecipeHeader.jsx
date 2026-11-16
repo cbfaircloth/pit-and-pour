@@ -15,7 +15,7 @@ export default function RecipeHeader() {
         aria-label="Return to Pit & Pour homepage"
       >
         <img
-          src="/images/branding/pit-and-pour-logo.png"
+          src="/images/branding/pit-and-pour-christmas.png"
           alt="Pit & Pour"
           className="recipe-brand-logo"
         />
