@@ -1728,3 +1728,148 @@
     display: none !important;
   }
 }
+
+/* =========================================
+   PIT & POUR — GRILL AMBIENCE
+   ========================================= */
+
+.grill-ambience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.grill-ambience-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 24px;
+
+  background: rgba(20, 20, 20, 0.85);
+  color: #f5ead7;
+
+  border: 1px solid #b87333;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.grill-ambience-button:hover {
+  background: #b87333;
+  color: #141414;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(184, 115, 51, 0.25);
+}
+
+.grill-ambience-button[aria-pressed="true"] {
+  background: rgba(184, 115, 51, 0.15);
+  border-color: #d99555;
+  color: #f5ead7;
+}
+
+.grill-ambience-button:focus-visible {
+  outline: 2px solid #d99555;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .grill-ambience {
+    margin: 18px auto;
+  }
+
+  .grill-ambience-button {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+}
+
+/* =========================================
+   PIT & POUR — HEADER GRILL SOUNDS
+   ========================================= */
+
+.site-header .header-container {
+  position: relative;
+  padding-right: 170px;
+}
+
+.header-grill-ambience {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.header-grill-ambience .grill-ambience {
+  margin: 0;
+  padding: 0;
+}
+
+.header-grill-ambience .grill-ambience-button {
+  padding: 9px 13px;
+  font-size: 12px;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+/* Keep the navigation usable on smaller screens */
+@media (max-width: 900px) {
+  .site-header .header-container {
+    padding-right: 65px;
+  }
+
+  .header-grill-ambience {
+    right: 10px;
+  }
+
+  .header-grill-ambience .grill-ambience-button {
+    padding: 9px;
+    font-size: 0;
+    gap: 0;
+  }
+
+  .header-grill-ambience .grill-ambience-button span:first-child {
+    font-size: 19px;
+  }
+}
+
+/* Compact Grill Sounds navigation control */
+
+.header-grill-ambience .grill-ambience-button {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+  border-radius: 50%;
+}
+
+.header-grill-ambience .grill-ambience-button span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+@media (min-width: 901px) {
+  .site-header .header-container {
+    padding-right: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header .header-container {
+    padding-right: 60px;
+  }
+}

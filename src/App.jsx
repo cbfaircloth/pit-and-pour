@@ -3,6 +3,7 @@ import './App.css'
 import './Christmas.css';
 
 import ChristmasSnowfall from "./components/ChristmasSnowfall";
+import GrillAmbience from "./components/GrillAmbience";
 
 import { useNavigate, useLocation } from "react-router-dom";
 import SpareRibs from "./pages/SpareRibs";
@@ -415,6 +416,10 @@ if (
               About
             </button>
           </nav>
+
+          <div className="header-grill-ambience">
+            <GrillAmbience />
+          </div>
         </div>
       </header>
 
