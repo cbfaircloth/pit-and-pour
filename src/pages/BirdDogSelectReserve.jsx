@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import RecipeHeader from "../components/RecipeHeader";
-import ReactionButtons from "../components/ReactionButtons";
+import ContentWithReactions from "../components/ContentWithReactions";
 export default function BirdDogSelectReserve() {
   const [enlargedPhoto, setEnlargedPhoto] = useState(null);
 
@@ -40,10 +40,7 @@ export default function BirdDogSelectReserve() {
                     </p>
         </div>
 
-        <ReactionButtons
-          contentType="weekend-pour"
-          contentId="bird-dog-select-reserve"
-        />
+        <ContentWithReactions />
 
         <div className="recipe-info-grid">
           <div className="recipe-info-item">

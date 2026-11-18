@@ -240,10 +240,7 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <ContentWithReactions
-            contentType="kitchen"
-            contentId="cheesy-sausage-potatoes"
-          >
+          <ContentWithReactions>
             <CheesySausagePotatoes />
           </ContentWithReactions>
         </div>
@@ -272,10 +269,7 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <ContentWithReactions
-            contentType="kitchen"
-            contentId="cheesy-beef-rice"
-          >
+          <ContentWithReactions>
             <CheesyBeefRice />
           </ContentWithReactions>
         </div>
@@ -301,10 +295,7 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <ContentWithReactions
-            contentType="kitchen"
-            contentId="korean-beef-bowl"
-          >
+          <ContentWithReactions>
             <KoreanBeefBowl />
           </ContentWithReactions>
         </div>
@@ -332,10 +323,7 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <ContentWithReactions
-            contentType="kitchen"
-            contentId="mexican-pizza"
-          >
+          <ContentWithReactions>
             <MexicanPizza />
           </ContentWithReactions>
         </div>
@@ -363,10 +351,7 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <ContentWithReactions
-            contentType="kitchen"
-            contentId="esquites"
-          >
+          <ContentWithReactions>
             <Esquites />
           </ContentWithReactions>
         </div>
@@ -392,10 +377,7 @@ if (
           >
             ← Back to The Smokehouse
           </button>
-<ContentWithReactions
-            contentType="smokehouse"
-            contentId="spare-ribs"
-          >
+<ContentWithReactions>
             <SpareRibs />
           </ContentWithReactions>
         </div>

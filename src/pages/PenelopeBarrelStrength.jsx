@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import RecipeHeader from "../components/RecipeHeader";
-import ReactionButtons from "../components/ReactionButtons";
+import ContentWithReactions from "../components/ContentWithReactions";
 
 export default function PenelopeBarrelStrength() {
   const [enlargedPhoto, setEnlargedPhoto] = useState(null);
@@ -76,10 +76,7 @@ export default function PenelopeBarrelStrength() {
           </p>
                 </div>
 
-        <ReactionButtons
-          contentType="weekend-pour"
-          contentId="penelope-barrel-strength"
-        />
+        <ContentWithReactions />
 
         <div className="recipe-info-grid">
           <div className="recipe-info-item">
