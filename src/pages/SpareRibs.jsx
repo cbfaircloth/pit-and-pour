@@ -1,4 +1,4 @@
-import ReactionButtons from '../components/ReactionButtons';
+
 export default function SpareRibs() {
   return (
     <article className="smokehouse-article">
@@ -21,12 +21,7 @@ export default function SpareRibs() {
         and finished with Blues Hog Original BBQ Sauce
         and Heath Riles Honey Rub.
       </p>
- <ReactionButtons
-        contentType="smokehouse"
-        contentId="spare-ribs"
-      />
-  
-<div className="recipe-info">
+  <div className="recipe-info">
   <div className="recipe-info-item">
     <span>THE SMOKER</span>
     <strong>Traeger Pro 34</strong>

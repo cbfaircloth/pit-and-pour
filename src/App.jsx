@@ -19,6 +19,7 @@ import About from "./pages/About";
 import { recipes } from "./data/recipes";
 import { bourbonReviews } from "./data/bourbonReviews";
 import RecipeHeader from "./components/RecipeHeader";
+import ReactionButtons from "./components/ReactionButtons";
 import { useEffect } from 'react';
 
 // Automatically find the newest published recipe in a collection.
@@ -34,7 +35,17 @@ const latestKitchenRecipe = getLatestRecipe("kitchen");
 const latestBourbonReview = [...bourbonReviews].sort(
   (a, b) => b.publishOrder - a.publishOrder
 )[0];
-
+function RecipeWithReactions({ contentType, contentId, children }) {
+  return (
+    <>
+      <ReactionButtons
+        contentType={contentType}
+        contentId={contentId}
+      />
+      {children}
+    </>
+  );
+}
 function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -215,8 +226,7 @@ if (
             ← Back to The Weekend Pour
           </button>
         </div>
-
-        <BirdDogSelectReserve />
+  <BirdDogSelectReserve />
         <Footer />
       </div>
     );
@@ -242,7 +252,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <CheesySausagePotatoes />
+          <RecipeWithReactions
+  contentType="kitchen"
+  contentId="cheesy-sausage-potatoes"
+>
+  <CheesySausagePotatoes />
+</RecipeWithReactions>
         </div>
         <Footer />
       </div>
@@ -269,7 +284,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <CheesyBeefRice />
+          <RecipeWithReactions
+  contentType="kitchen"
+  contentId="cheesy-beef-rice"
+>
+  <CheesyBeefRice />
+</RecipeWithReactions>
         </div>
 
         <Footer />
@@ -294,7 +314,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <KoreanBeefBowl />
+          <RecipeWithReactions
+  contentType="kitchen"
+  contentId="korean-beef-bowl"
+>
+  <KoreanBeefBowl />
+</RecipeWithReactions>
         </div>
 
         <Footer />
@@ -320,7 +345,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <MexicanPizza />
+          <RecipeWithReactions
+  contentType="kitchen"
+  contentId="mexican-pizza"
+>
+  <MexicanPizza />
+</RecipeWithReactions>
         </div>
 
         <Footer />
@@ -346,7 +376,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <Esquites />
+          <RecipeWithReactions
+  contentType="kitchen"
+  contentId="esquites"
+>
+  <Esquites />
+</RecipeWithReactions>
         </div>
 
         <Footer />
@@ -370,8 +405,11 @@ if (
           >
             ← Back to The Smokehouse
           </button>
-
-          <SpareRibs />
+<ReactionButtons
+  contentType="smokehouse"
+  contentId="spare-ribs"
+/>
+<SpareRibs />
         </div>
         <Footer />
       </div>

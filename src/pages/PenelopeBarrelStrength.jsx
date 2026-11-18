@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import RecipeHeader from "../components/RecipeHeader";
+import ReactionButtons from "../components/ReactionButtons";
 
 export default function PenelopeBarrelStrength() {
   const [enlargedPhoto, setEnlargedPhoto] = useState(null);
@@ -73,7 +74,12 @@ export default function PenelopeBarrelStrength() {
             tell you, this one definitely lets you know
             it's there!
           </p>
-        </div>
+                </div>
+
+        <ReactionButtons
+          contentType="weekend-pour"
+          contentId="penelope-barrel-strength"
+        />
 
         <div className="recipe-info-grid">
           <div className="recipe-info-item">

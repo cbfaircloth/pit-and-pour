@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import RecipeHeader from "../components/RecipeHeader";
+import ReactionButtons from "../components/ReactionButtons";
 export default function BirdDogSelectReserve() {
   const [enlargedPhoto, setEnlargedPhoto] = useState(null);
 
@@ -36,8 +37,13 @@ export default function BirdDogSelectReserve() {
             Sometimes a cheaper bottle surprises you, and this one definitely
             did. Bird Dog Select Reserve is a smooth, easy-drinking bourbon
             that I'd have no problem picking up again.
-          </p>
+                    </p>
         </div>
+
+        <ReactionButtons
+          contentType="weekend-pour"
+          contentId="bird-dog-select-reserve"
+        />
 
         <div className="recipe-info-grid">
           <div className="recipe-info-item">
