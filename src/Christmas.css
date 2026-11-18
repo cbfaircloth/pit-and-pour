@@ -614,3 +614,60 @@ body.christmas-theme
     filter: none !important;
   }
 }
+
+/* =========================================
+   PIT & POUR — CHRISTMAS REACTIONS
+   ========================================= */
+
+body.christmas-theme .reaction-section h3 {
+  color: #fff4df;
+}
+
+body.christmas-theme .reaction-button {
+  background: #242527;
+  color: #fff4df;
+  border: 1px solid #454545;
+}
+
+/* LIKE — Christmas Green */
+body.christmas-theme .reaction-button:first-child svg {
+  color: #36c96b;
+}
+
+body.christmas-theme .reaction-button:first-child:hover:not(:disabled) {
+  background: #193b29;
+  border-color: #36c96b;
+  box-shadow: 0 4px 14px rgba(54, 201, 107, 0.2);
+}
+
+body.christmas-theme .reaction-button:first-child.active {
+  background: #193b29;
+  border-color: #36c96b;
+  box-shadow: 0 0 12px rgba(54, 201, 107, 0.3);
+}
+
+/* DISLIKE — Christmas Red */
+body.christmas-theme .reaction-button:last-child svg {
+  color: #ff4455;
+}
+
+body.christmas-theme .reaction-button:last-child:hover:not(:disabled) {
+  background: #421e25;
+  border-color: #ff4455;
+  box-shadow: 0 4px 14px rgba(255, 68, 85, 0.2);
+}
+
+body.christmas-theme .reaction-button:last-child.active {
+  background: #421e25;
+  border-color: #ff4455;
+  box-shadow: 0 0 12px rgba(255, 68, 85, 0.3);
+}
+
+/* Keyboard focus */
+body.christmas-theme .reaction-button:first-child:focus-visible {
+  outline-color: #36c96b;
+}
+
+body.christmas-theme .reaction-button:last-child:focus-visible {
+  outline-color: #ff4455;
+}

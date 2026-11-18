@@ -1627,3 +1627,104 @@
     display: none !important;
   }
 }
+
+/* =========================================
+   PIT & POUR — REACTION BUTTONS
+   ========================================= */
+
+.reaction-section {
+  margin: 28px 0 32px;
+}
+
+.reaction-section h3 {
+  color: #f5e6d2;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.reaction-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.reaction-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+  min-height: 48px;
+
+  background: #242527;
+  color: #f5e6d2;
+  border: 1px solid #755338;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reaction-button svg {
+  color: #d58646;
+  flex-shrink: 0;
+}
+
+.reaction-button:hover:not(:disabled) {
+  background: #32302e;
+  border-color: #d58646;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(213, 134, 70, 0.16);
+}
+
+.reaction-button.active {
+  background: #493021;
+  border-color: #d58646;
+  box-shadow: 0 0 0 1px rgba(213, 134, 70, 0.3);
+}
+
+.reaction-button:focus-visible {
+  outline: 2px solid #d58646;
+  outline-offset: 3px;
+}
+
+.reaction-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.reaction-error {
+  color: #ff8b8b;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+@media (max-width: 480px) {
+  .reaction-button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .reaction-section h3 {
+    font-size: 17px;
+  }
+}
+
+/* Keep reaction buttons out of printed recipes */
+@media print {
+  .reaction-section {
+    display: none !important;
+  }
+}

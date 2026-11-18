@@ -19,6 +19,7 @@ import About from "./pages/About";
 import { recipes } from "./data/recipes";
 import { bourbonReviews } from "./data/bourbonReviews";
 import RecipeHeader from "./components/RecipeHeader";
+import { useEffect } from 'react';
 
 // Automatically find the newest published recipe in a collection.
 const getLatestRecipe = (category) => {
@@ -591,5 +592,7 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;
