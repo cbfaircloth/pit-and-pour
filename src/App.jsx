@@ -19,8 +19,7 @@ import About from "./pages/About";
 import { recipes } from "./data/recipes";
 import { bourbonReviews } from "./data/bourbonReviews";
 import RecipeHeader from "./components/RecipeHeader";
-import ReactionButtons from "./components/ReactionButtons";
-import { useEffect } from 'react';
+import ContentWithReactions from "./components/ContentWithReactions";
 
 // Automatically find the newest published recipe in a collection.
 const getLatestRecipe = (category) => {
@@ -35,17 +34,6 @@ const latestKitchenRecipe = getLatestRecipe("kitchen");
 const latestBourbonReview = [...bourbonReviews].sort(
   (a, b) => b.publishOrder - a.publishOrder
 )[0];
-function RecipeWithReactions({ contentType, contentId, children }) {
-  return (
-    <>
-      <ReactionButtons
-        contentType={contentType}
-        contentId={contentId}
-      />
-      {children}
-    </>
-  );
-}
 function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -252,12 +240,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <RecipeWithReactions
-  contentType="kitchen"
-  contentId="cheesy-sausage-potatoes"
->
-  <CheesySausagePotatoes />
-</RecipeWithReactions>
+          <ContentWithReactions
+            contentType="kitchen"
+            contentId="cheesy-sausage-potatoes"
+          >
+            <CheesySausagePotatoes />
+          </ContentWithReactions>
         </div>
         <Footer />
       </div>
@@ -284,14 +272,13 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <RecipeWithReactions
-  contentType="kitchen"
-  contentId="cheesy-beef-rice"
->
-  <CheesyBeefRice />
-</RecipeWithReactions>
+          <ContentWithReactions
+            contentType="kitchen"
+            contentId="cheesy-beef-rice"
+          >
+            <CheesyBeefRice />
+          </ContentWithReactions>
         </div>
-
         <Footer />
       </div>
     );
@@ -314,12 +301,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <RecipeWithReactions
-  contentType="kitchen"
-  contentId="korean-beef-bowl"
->
-  <KoreanBeefBowl />
-</RecipeWithReactions>
+          <ContentWithReactions
+            contentType="kitchen"
+            contentId="korean-beef-bowl"
+          >
+            <KoreanBeefBowl />
+          </ContentWithReactions>
         </div>
 
         <Footer />
@@ -345,12 +332,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <RecipeWithReactions
-  contentType="kitchen"
-  contentId="mexican-pizza"
->
-  <MexicanPizza />
-</RecipeWithReactions>
+          <ContentWithReactions
+            contentType="kitchen"
+            contentId="mexican-pizza"
+          >
+            <MexicanPizza />
+          </ContentWithReactions>
         </div>
 
         <Footer />
@@ -376,12 +363,12 @@ if (
             ← Back to The Kitchen
           </button>
 
-          <RecipeWithReactions
-  contentType="kitchen"
-  contentId="esquites"
->
-  <Esquites />
-</RecipeWithReactions>
+          <ContentWithReactions
+            contentType="kitchen"
+            contentId="esquites"
+          >
+            <Esquites />
+          </ContentWithReactions>
         </div>
 
         <Footer />
@@ -405,11 +392,12 @@ if (
           >
             ← Back to The Smokehouse
           </button>
-<ReactionButtons
-  contentType="smokehouse"
-  contentId="spare-ribs"
-/>
-<SpareRibs />
+<ContentWithReactions
+            contentType="smokehouse"
+            contentId="spare-ribs"
+          >
+            <SpareRibs />
+          </ContentWithReactions>
         </div>
         <Footer />
       </div>
