@@ -1,3 +1,4 @@
+
 export const bourbonReviews = [
   {
     id: "bird-dog-select-reserve",
@@ -16,5 +17,14 @@ export const bourbonReviews = [
       "A four-grain bourbon with apple and honey on the nose, sweetness up front, and a noticeable kick on the backend. A little ice takes the edge off, and I'd absolutely buy it again!",
     image: "/images/bourbon/penelope-barrel-strength.jpeg",
     url: "/weekend-pour/penelope-barrel-strength",
+  },
+  {
+    id: "flight-lqr-house",
+    publishOrder: 3,
+    title: "Flight by LQR House",
+    description:
+      "A sweet, rum-and-wine-barrel-finished bourbon with black cherry, spice, and some burn on the backend. At $21, it's well worth trying, but it's not a bottle I'd go out of my way to hunt down.",
+    image: "/images/bourbon/flight-lqr-house.jpg",
+    url: "/weekend-pour/flight-lqr-house",
   },
 ];

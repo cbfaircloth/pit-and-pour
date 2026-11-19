@@ -1873,3 +1873,19 @@
     padding-right: 60px;
   }
 }
+/* =========================================
+   BOURBON REVIEW SPACING
+   ========================================= */
+
+.bourbon-review-template .reaction-section {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.bourbon-review-template .recipe-header {
+  margin-bottom: 0;
+}
+
+.bourbon-review-template .recipe-info-grid {
+  margin-top: 0;
+}

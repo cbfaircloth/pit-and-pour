@@ -14,6 +14,7 @@ import MexicanPizza from "./pages/MexicanPizza";
 import Esquites from "./pages/Esquites";
 import BirdDogSelectReserve from "./pages/BirdDogSelectReserve";
 import PenelopeBarrelStrength from "./pages/PenelopeBarrelStrength";
+import FlightLQRHouse from "./pages/FlightLQRHouse";
 import Footer from "./components/Footer";
 import CollectionPage from "./components/CollectionPage";
 import About from "./pages/About";
@@ -154,6 +155,10 @@ if (id === "esquites") {
   navigate("/weekend-pour/penelope-barrel-strength");
   window.scrollTo(0, 0);
 }
+if (id === "flight-lqr-house") {
+  navigate("/weekend-pour/flight-lqr-house");
+  window.scrollTo(0, 0);
+}
           }}
         />
         <Footer />
@@ -245,6 +250,35 @@ if (
             <CheesySausagePotatoes />
           </ContentWithReactions>
         </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Flight by LQR House bourbon review
+  if (location.pathname === "/weekend-pour/flight-lqr-house") {
+    return (
+      <div>
+        <div
+          className="recipe-page-container"
+          style={{
+            paddingTop: "30px",
+            paddingBottom: "0",
+          }}
+        >
+          <button
+            type="button"
+            className="recipe-button recipe-back-button"
+            onClick={() => {
+              navigate("/weekend-pour");
+              window.scrollTo(0, 0);
+            }}
+          >
+            ← Back to The Weekend Pour
+          </button>
+        </div>
+
+        <FlightLQRHouse />
         <Footer />
       </div>
     );
