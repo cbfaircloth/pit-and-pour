@@ -155,6 +155,7 @@ export const recipes = [
     url: "/smokehouse/st-louis-cherry-cola-spare-ribs",
     ingredients: [
       "pork spare ribs",
+      "olive oil",
       "Fire & Smoke Society Cherry Cola BBQ Rub",
       "Country Crock buttery spread",
       "honey",

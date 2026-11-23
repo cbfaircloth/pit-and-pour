@@ -35,6 +35,7 @@ export default function StLouisCherryColaRibs() {
       ]}
       ingredients={[
         "2 racks of pork spare ribs, trimmed St. Louis style",
+        "Olive oil (binder)",
         "Fire & Smoke Society Cherry Cola BBQ Rub",
         "Country Crock buttery spread",
         "Honey",
@@ -54,7 +55,7 @@ export default function StLouisCherryColaRibs() {
         {
           title: "Season Them Up",
           description:
-            "Coat both racks with Fire & Smoke Society Cherry Cola BBQ Rub. Make sure to cover both sides and let the seasoning settle while the smoker comes up to temperature.",
+            "Apply a light coating of olive oil to both sides of the ribs as a binder. Once coated, generously season both sides with Fire & Smoke Society Cherry Cola BBQ Rub. Let the seasoning settle while the smoker comes up to temperature.",
         },
         {
           title: "Fire Up the Traeger",
