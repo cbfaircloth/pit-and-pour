@@ -7,6 +7,7 @@ import GrillAmbience from "./components/GrillAmbience";
 
 import { useNavigate, useLocation } from "react-router-dom";
 import SpareRibs from "./pages/SpareRibs";
+import StLouisCherryColaRibs from "./pages/StLouisCherryColaRibs";
 import CheesySausagePotatoes from "./pages/CheesySausagePotatoes";
 import CheesyBeefRice from "./pages/CheesyBeefRice";
 import KoreanBeefBowl from "./pages/KoreanBeefBowl";
@@ -119,6 +120,11 @@ function AppContent() {
           onSelect={(id) => {
             if (id === "spare-ribs") {
               navigate("/smokehouse/spare-ribs");
+              window.scrollTo(0, 0);
+            }
+
+            if (id === "st-louis-cherry-cola-spare-ribs") {
+              navigate("/smokehouse/st-louis-cherry-cola-spare-ribs");
               window.scrollTo(0, 0);
             }
 
@@ -391,6 +397,32 @@ if (
           </ContentWithReactions>
         </div>
 
+        <Footer />
+      </div>
+    );
+  }
+
+  // St. Louis Style Smoked Cherry Cola Spare Ribs recipe
+  if (location.pathname === "/smokehouse/st-louis-cherry-cola-spare-ribs") {
+    return (
+      <div className="recipe-page">
+        <div className="recipe-page-container">
+          <RecipeHeader />
+          <button
+            type="button"
+            className="recipe-button recipe-back-button"
+            onClick={() => {
+              navigate("/smokehouse");
+              window.scrollTo(0, 0);
+            }}
+          >
+            ← Back to The Smokehouse
+          </button>
+
+          <ContentWithReactions>
+            <StLouisCherryColaRibs />
+          </ContentWithReactions>
+        </div>
         <Footer />
       </div>
     );

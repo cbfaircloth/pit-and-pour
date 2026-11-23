@@ -144,4 +144,33 @@ export const recipes = [
       "Quick & Easy",
     ],
   },
+  {
+    id: "st-louis-cherry-cola-spare-ribs",
+    publishOrder: 7,
+    title: "St. Louis Style Smoked Cherry Cola Spare Ribs",
+    description:
+      "Two racks of spare ribs trimmed St. Louis style, seasoned with Cherry Cola rub, and smoked over pecan pellets with an extra smoke tube. Wrapped with Country Crock, honey, brown sugar, and apple juice, then finished with Blues Hog Raspberry Chipotle BBQ sauce. Sweet, smoky, tender, and just a little heat!",
+    image: "/images/food/smoked-spare-ribs.jpeg",
+    category: "smokehouse",
+    url: "/smokehouse/st-louis-cherry-cola-spare-ribs",
+    ingredients: [
+      "pork spare ribs",
+      "Fire & Smoke Society Cherry Cola BBQ Rub",
+      "Country Crock buttery spread",
+      "honey",
+      "light brown sugar",
+      "apple juice",
+      "Blues Hog Raspberry Chipotle BBQ Sauce",
+      "pecan wood pellets",
+    ],
+    tags: [
+      "Pork",
+      "BBQ",
+      "St. Louis Style",
+      "Pellet Smoker",
+      "Pecan Smoke",
+      "Low & Slow",
+      "Weekend Cook",
+    ],
+  },
 ];
